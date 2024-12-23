@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinoflick Afiliados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dinoflick Afiliados</h1>
+    <div id="configurations">
+        <!-- Formulário para adicionar respostas dinâmicas -->
+        <div class="response-config">
+            <label for="trigger">Gatilho:</label>
+            <input type="text" class="trigger" placeholder="Digite o gatilho (ex: oi)">
+
+            <label for="message">Mensagem:</label>
+            <textarea class="message" rows="2" placeholder="Digite a mensagem de resposta"></textarea>
+
+            <label for="audio">Áudio:</label>
+            <input type="file" class="audio" accept="audio/*">
+        </div>
+    </div>
+
+    <!-- Botões para salvar e adicionar novas configurações -->
+    <button id="addConfig">Adicionar Nova Resposta</button>
+    <button id="saveConfig">Salvar Configurações</button>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

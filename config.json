@@ -1,0 +1,49 @@
+{
+  "responses": [
+    {
+      "trigger": "Olá, tenho interese na DInoFlick, gostaria de mais informações",
+      "message": " Ótimo! Nossa plataforma de streaming oferece uma experiência completa de entretenimento, com uma biblioteca vasta e variada de conteúdos, incluindo filmes, séries, programas de TV e muito mais. Além disso, oferecemos recursos exclusivos, como transmissões ao vivo de eventos especiais e acesso antecipado a lançamentos exclusivos. Como você geralmente consome conteúdo de entretenimento?\n",
+      "type": "text"
+    },
+    {
+      "trigger": "Normalmente assisto a filmes e séries de TV em casa. Estou interessado em saber como sua plataforma se destaca das outras.",
+      "message": "Compreendo. O que diferencia nossa plataforma é o compromisso com a qualidade e a diversidade do conteúdo. Nós nos associamos com os principais estúdios de produção para garantir que nossos assinantes tenham acesso aos últimos lançamentos, bem como a clássicos do cinema e conteúdos exclusivos que não estão disponíveis em nenhum outro lugar. Além disso, nossa interface é projetada para ser intuitiva e fácil de usar, permitindo que você encontre rapidamente o que deseja assistir.\n",
+      "type": "text"
+    },
+    {
+      "trigger": "Parece interessante. Estou um pouco preocupado com o custo. Como são os planos de assinatura?",
+      "message": "Entendo sua preocupação com o custo. Oferecemos uma variedade de planos de assinatura para atender às diferentes necessidades e orçamentos dos nossos clientes. Nossos planos são flexíveis e acessíveis, com opções que incluem recursos como streaming em alta definição, reprodução em vários dispositivos simultaneamente. Além disso, oferecemos um período de teste gratuito para que você possa experimentar nossa plataforma sem nenhum compromisso. Isso ajuda a garantir que você esteja totalmente satisfeito com sua escolha antes de se comprometer com um plano de assinatura.\n",
+      "type": "text"
+    },
+    {
+      "trigger": "Isso soa justo. Gostaria de experimentar o período de teste gratuito para ver como me adapto à plataforma.",
+      "message": "Fantástico! Estou feliz em ouvir isso. vou te enviar o teste gratuito e fornecer instruções sobre como começar a explorar nossa vasta biblioteca de conteúdo. Depois que o período de teste terminar, estarei à disposição para discutir os diferentes planos de assinatura disponíveis e ajudá-lo a selecionar aquele que melhor atende às suas necessidades de entretenimento",
+      "type": "text"
+    },
+    {
+      "trigger": "ok aguardo o teste",
+      "message": "Com certeza! Vou te  enviar o teste  agora mesmo ok, Se surgir alguma dúvida durante o processo, não hesite em me contatar. Estou aqui para ajudar em cada etapa do caminho.\n",
+      "type": "text"
+    },
+    {
+      "trigger": "Testei a plataforma gostei muito!",
+      "message": "Eu disse que não iria se arrepender, estamos muito feliz que gostou, agora vou te passar os planos e você vê qual se encaixa melhor atualmente no seu orçamento ok?\n\nTemos o anual com 2 telas saindo por R$ 149,90\n\n2 anos com 2 telas também saindo por R$ 249,90\n\nE temos o campeão de vendas, que é o que mais vale a pena financeiramente, o de 3 anos com 2 telas saindo por apenas R$ 349,90, qual você achou mais interessante?\n",
+      "type": "text"
+    },
+    {
+      "trigger": "acho que o 149,90 é bom, cabe no meu orcamento",
+      "message": "Sim ele é mais ecônomico que possuímos, vou te mandar o link para você efetuar a compra ok, e pode ficar tranquilo todos seus dados estão protegidos, assim que efetuar o pagamento chegará um e-mail com seu acesso, e a instrução para instalar em todos seus aparelhos ok?\n\n\nsegue o link : (seu link de afiliado)\n\n",
+      "type": "text"
+    },
+    {
+      "trigger": "Eu gostei do plano de 2 anos por R$ 249,90, ele parece interessante",
+      "message": "Excelente escolha! O plano de 2 anos oferece um ótimo custo-benefício, pois você economiza mais ao longo do tempo. Vou te enviar o link para realizar a compra. Assim que o pagamento for confirmado, você receberá um e-mail com todas as instruções para instalar e utilizar em todos os seus dispositivos. Fique tranquilo que seus dados estão protegidos durante o processo de compra, ok?\n\nsegue o link : (seu link de afiliado)",
+      "type": "text"
+    },
+    {
+      "trigger": "Acho que o plano de 3 anos por R$ 349,90 é o mais vantajoso.",
+      "message": "Ótima escolha! O plano de 3 anos é o nosso campeão de vendas e oferece o melhor valor a longo prazo. Vou te enviar o link para concluir a compra. Assim que o pagamento for realizado, você receberá um e-mail com o acesso e as instruções para instalação em todos os seus dispositivos. Fique tranquilo que seus dados estarão totalmente seguros, ok?\n\nsegue o link : (seu link de afiliado)\n",
+      "type": "text"
+    }
+  ]
+}
