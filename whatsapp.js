@@ -1,5 +1,5 @@
-const { Client, LocalAuth } = require('whatsapp-web.js');
-const qrcode = require('qrcode-terminal');
+const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
+const qrcode = require('qrcode');
 const path = require('path');
 const fs = require('fs');
 
@@ -26,13 +26,24 @@ exports.startClient = (mainWindow) => {
     loadResponses();
 
     client.on('qr', (qr) => {
-        qrcode.generate(qr, { small: true });
-        mainWindow.webContents.send('qr-code', qr);
+        // Gera o QR Code em base64
+        qrcode.toDataURL(qr, (err, url) => {
+            if (err) {
+                console.error('Erro ao gerar o QR Code:', err);
+                return;
+            }
+
+            console.log('QR Code gerado com sucesso!');
+            console.log(url); // Veja a URL base64 gerada para o QR Code
+
+            // Envia o QR Code base64 para o frontend
+            mainWindow.webContents.send('qr-code', url);
+        });
     });
 
     client.on('ready', () => {
         console.log('WhatsApp está pronto!');
-        mainWindow.webContents.send('status', 'Conectado');
+        mainWindow.webContents.send('status', 'Conectado'); // Envia status para o frontend
     });
 
     client.on('message', (msg) => {
@@ -48,8 +59,26 @@ exports.startClient = (mainWindow) => {
 
                 if (response.type === 'text') {
                     msg.reply(response.message); // Responde com o texto associado
+                } else if (response.type === 'audio') {
+                    // Caminho completo do arquivo de áudio
+                    const audioPath = path.join(__dirname, 'audios', response.fileName);
+
+                    // Verifica se o arquivo de áudio existe
+                    if (fs.existsSync(audioPath)) {
+                        // Cria o objeto de mídia para enviar
+                        const audio = MessageMedia.fromFilePath(audioPath);
+
+                        // Envia o áudio
+                        client.sendMessage(msg.from, audio).then(() => {
+                            console.log('Áudio enviado com sucesso!');
+                        }).catch((err) => {
+                            console.error('Erro ao enviar áudio:', err);
+                        });
+                    } else {
+                        console.error(`Arquivo de áudio não encontrado: ${audioPath}`);
+                        msg.reply('Desculpe, o arquivo de áudio não está disponível.');
+                    }
                 }
-                // Caso precise adicionar suporte a áudios ou outros tipos, pode ser expandido aqui
             }
         });
     });

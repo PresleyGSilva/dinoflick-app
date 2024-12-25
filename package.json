@@ -14,6 +14,8 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "electron-squirrel-startup": "^1.0.1",
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4",
     "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "^1.26.0"
   },
@@ -32,26 +34,30 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "./assets/whatsapp.ico" 
+        "icon": "./assets/whatsapp.ico"
       },
       "makers": [
         {
-          "name": "@electron-forge/maker-squirrel", 
+          "name": "@electron-forge/maker-squirrel",
           "config": {
-            "setupIcon": "./assets/whatsapp.ico" 
+            "setupIcon": "./assets/whatsapp.ico"
           }
         },
         {
-          "name": "@electron-forge/maker-deb", 
+          "name": "@electron-forge/maker-deb",
           "config": {}
         },
         {
-          "name": "@electron-forge/maker-rpm", 
+          "name": "@electron-forge/maker-rpm",
           "config": {}
         },
         {
           "name": "@electron-forge/maker-zip",
-          "platforms": ["darwin", "win32", "linux"]
+          "platforms": [
+            "darwin",
+            "win32",
+            "linux"
+          ]
         }
       ]
     }
